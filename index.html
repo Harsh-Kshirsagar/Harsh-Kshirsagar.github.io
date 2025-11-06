@@ -1,270 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Harsh Arvind Kshirsagar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoIF2Q/XPj/BqJqY7hYqK8Dk2fXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5; /* Light grey background */
-            color: #333;
-        }
-        .resume-container {
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            margin: 20px auto;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .header-section {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .header-section h1 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #343a40;
-            margin-bottom: 5px;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: flex-end; /* Align contact info to the right */
-            align-items: center;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .contact-info span {
-            margin-left: 15px;
-            display: flex;
-            align-items: center;
-        }
-        .contact-info i {
-            margin-right: 5px;
-            color: #007bff; /* Bootstrap primary blue */
-        }
-        .resume-body {
-            display: flex;
-        }
-        .left-column {
-            width: 30%;
-            background-color: #e9ecef; /* Light grey for left column */
-            padding: 20px;
-            border-right: 1px solid #dee2e6;
-        }
-        .right-column {
-            width: 70%;
-            padding: 20px;
-        }
-        .section-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #343a40;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #007bff; /* Blue underline for sections */
-        }
-        .subsection-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #495057;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-        ul {
-            list-style-type: none; /* Remove default bullet points */
-            padding-left: 0;
-            margin-bottom: 10px;
-        }
-        ul li {
-            position: relative;
-            padding-left: 20px; /* Space for custom bullet */
-            margin-bottom: 5px;
-        }
-        ul li::before {
-            content: "\2022"; /* Unicode bullet point */
-            color: #007bff; /* Blue bullet */
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .nested-list {
-            padding-left: 20px;
-        }
-        .nested-list li::before {
-            content: "\2023"; /* Triangle bullet */
-            color: #007bff;
-        }
-        .table-like {
-            display: grid;
-            grid-template-columns: 120px 1fr; /* Fixed width for labels, rest for values */
-            gap: 5px 10px;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-        .table-like div {
-            padding: 3px 0;
-        }
-        .table-like div:nth-child(odd) {
-            font-weight: bold;
-            color: #495057;
-        }
-        .education-item, .skills-item {
-            margin-bottom: 15px;
-        }
-        .education-item p, .skills-item p {
-            margin-bottom: 2px;
-        }
-        .skills-category {
-            font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            color: #343a40;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 767.98px) {
-            .resume-body {
-                flex-direction: column;
-            }
-            .left-column, .right-column {
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid #dee2e6;
-            }
-            .header-section .contact-info {
-                justify-content: flex-start;
-                flex-wrap: wrap;
-            }
-            .contact-info span {
-                margin-left: 0;
-                margin-right: 15px;
-                margin-bottom: 5px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Harsh Arvind Kshirsagar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      padding: 20px;
+    }
+    .resume-container {
+      background-color: #fff;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 50px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #0d6efd;
+    }
+    .contact-info {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-bottom: 2px solid #0d6efd;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      padding-bottom: 3px;
+      text-transform: uppercase;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      border: 1px solid #dee2e6;
+      padding: 6px 8px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    table th {
+      background-color: #f1f3f5;
+      font-weight: 600;
+    }
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        margin: 0;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="resume-container">
-        <div class="header-section">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <h1 class="mb-0">Mr. Harsh Arvind Kshirsagar</h1>
-                <div class="contact-info mt-2 mt-md-0">
-                 <a href="https://wa.me/919529808907">
-  <i class="fab fa-whatsapp"></i> 9529808907
-</a>
-                    <span><i class="fas fa-envelope"></i> <a href="mailto:Kshirsagarharsh412@gmail.com" target="_blank">Kshirsagarharsh412@gmail.com</a></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="resume-body">
-            <div class="left-column">
-                <section class="education-section mb-4">
-                    <h2 class="section-title">EDUCATION</h2>
-                    <div class="education-item">
-                        <p class="fw-bold">Bachelor of Computer Science Entire. [ B. C. S ]</p>
-                        <p>University: Shivaji University, Kolhapur.</p>
-                        <p>Year of Passing: April 2025.</p>
-                        <p>Marks obtained: 83.44 %</p>
-                    </div>
-                    <div class="education-item">
-                        <p class="fw-bold">H.S.C.</p>
-                        <p>University: Maharashtra State Board of Secondary and Higher Secondary Education, Pune.</p>
-                        <p>Year of Passing: February 2022</p>
-                        <p>Marks obtained: 65.67 %</p>
-                    </div>
-                    <div class="education-item">
-                        <p class="fw-bold">S.S.C.</p>
-                        <p>University: Maharashtra State Board of Secondary and Higher Secondary Education, Pune.</p>
-                        <p>Year of Passing: March 2020</p>
-                        <p>Marks obtained: 88.00 %</p>
-                    </div>
-                </section>
-
-                <section class="devops-skills-section">
-                    <h2 class="section-title">DevOps:</h2>
-                    <ul>
-                        <li>Operating Systems: Linux, Windows.</li>
-                        <li>Version Control: Git, GitHub.</li>
-                        <li>Databases: MySQL, SQL Server.</li>
-                        <li>Hashi-Corp Configuration Language (HCL Language).</li>
-                        <li>Infrastructure as a code: Terraform.</li>
-                        <li>Docker: Software delivery tool.</li>
-                        <li>Networking Protocol: DNS.</li>
-                    </ul>
-                </section>
-            </div>
-
-            <div class="right-column">
-                <section class="professional-summary-section mb-4">
-                    <h2 class="section-title">Professional Summary</h2>
-                    <ul>
-                        <li>AWS Cloud Engineer Intern with experience in cloud infrastructure management.</li>
-                        <li>Skill in AWS Services: - EC2, S3, RDS, Lambda, IAM.</li>
-                        <li>Proficient in Git and Database Management.</li>
-                        <li>Experienced in Problem solving and troubleshooting.</li>
-                        <li>Passionate about Cloud Computing and automation.</li>
-                        <li>Seeking a full-time role in cloud computing.</li>
-                    </ul>
-                </section>
-
-                <section class="academic-internship-section mb-4">
-                    <h2 class="section-title">Academic Internship</h2>
-                    <p class="fw-bold mb-1">AWS Cloud Engineer as Intern</p>
-                    <p class="small text-muted mb-2">One IT Solutions Pvt. Ltd. Gadhinglaj, Dist. Kolhapur (November 2024 -Present)</p>
-                    <ul>
-                        <li>Cloud Infrastructure Management: Designed and deployed scalable, secure, and cost-efficient AWS infrastructure using services like EC2, S3, RDS, and Lambda, Load Balancing, Auto Scaling.</li>
-                        <li>Monitoring & Optimization: Monitored system performance using AWS CloudWatch and optimize resources to reduce costs by 15%.</li>
-                        <li>Security Compliance: Implemented security best practices, including IAM role-based access, encryption, and VPC configurations.</li>
-                        <li>Troubleshooting: Resolved infrastructure issues to ensure 99.9% system uptime.</li>
-                    </ul>
-                </section>
-
-                <section class="skills-section mb-4">
-                    <h2 class="section-title">Skills</h2>
-                    <ul>
-                        <li>Cloud Computing: Amazon Web Services (AWS)</li>
-                        <li class="skills-category">AWS Services:
-                            <ul class="nested-list">
-                                <li>Compute - Amazon EC2, Amazon Lambda.</li>
-                                <li>Storage – Amazon S3, EBS.</li>
-                                <li>Database – RDS, DynamoDB.</li>
-                                <li>Networking –VPC, Route53, Application Load Balancer.</li>
-                                <li>Security & Identity – IAM.</li>
-                                <li>Monitoring & Management – Cloud Watch, Auto Scaling.</li>
-                                <li>Notification Service – SNS.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="personal-details-section">
-                    <h2 class="section-title">Personal Details</h2>
-                    <div class="table-like">
-                        <div>Date of Birth</div><div>31 January 2004</div>
-                        <div>Gender</div><div>Male</div>
-                        <div>Marital Status</div><div>Un - Married</div>
-                        <div>Languages Known</div><div>English, Marathi, Hindi</div>
-                        <div>Permanent Address</div><div>Ayodhya Nagar Gadhinglaj, Tal. Gadhinglaj, Dist. Kolhapur 416502.</div>
-                    </div>
-                </section>
-            </div>
-        </div>
+  <div class="resume-container">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h1 class="mb-0">Harsh Arvind Kshirsagar</h1>
+      <div class="contact-info text-end">
+        <div>📞 +91 9529808907</div>
+        <div>✉️ <a href="mailto:kshirsagarharsh412@gmail.com">kshirsagarharsh412@gmail.com</a></div>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Profile Summary -->
+    <div class="section-title">Profile Summary</div>
+    <p>
+      Jr. AWS Cloud Engineer Intern with experience in cloud infrastructure management. Skilled in AWS Services like EC2, S3, RDS, Lambda, IAM, and VPC. 
+      Proficient in Git and Database Management. Experienced in problem-solving and troubleshooting. Passionate about Cloud Computing and automation. 
+      Seeking a full-time role in cloud computing. Key strengths include analytical thinking, adaptability, and quick learning of new technologies.
+    </p>
+
+    <!-- Profile Highlights -->
+    <div class="section-title">Profile Highlights</div>
+    <ul>
+      <li>AWS Cloud Infrastructure Management</li>
+      <li>Automation</li>
+      <li>Security & IAM Management</li>
+      <li>Monitoring & Cost Optimization</li>
+      <li>Problem Solving & Troubleshooting</li>
+      <li>Git & Version Control</li>
+    </ul>
+
+    <!-- Technical Skills -->
+    <div class="section-title">Technical Skills</div>
+    <ul>
+      <li><strong>Cloud Computing:</strong> Amazon Web Services (AWS)</li>
+      <li><strong>AWS Services:</strong> Compute, Storage, Database, Networking, Security and Identity, Monitoring & Management, Notification Service, CloudFormation</li>
+      <li><strong>Database:</strong> MySQL, SQL Server</li>
+      <li><strong>Operating System:</strong> Windows, Linux</li>
+      <li><strong>Version Control:</strong> Git, GitHub</li>
+      <li><strong>Networking Protocol:</strong> DNS</li>
+      <li><strong>Other:</strong> HashiCorp Configuration Language (HCL), Docker, Linux Script Writing</li>
+    </ul>
+
+    <!-- Work Experience -->
+    <div class="section-title">Work Experience</div>
+    <p><strong>One IT Solutions Pvt. Ltd</strong> | <em>Jan 2025 – Aug 2025</em></p>
+    <p><strong>Designation:</strong> Jr. AWS Cloud Engineer (Intern)</p>
+    <p><strong>Project Name:</strong> Cloud Infrastructure Management</p>
+    <p><strong>Description:</strong></p>
+    <p>
+      Designed and deployed scalable, secure, and cost-efficient AWS infrastructure using EC2, S3, RDS, Lambda, Load Balancing, and Auto Scaling. 
+      Monitored performance, implemented cost optimization strategies, and followed AWS best practices to maintain system and data security.
+    </p>
+    <p><strong>Technologies:</strong> AWS (EC2, S3, RDS, Lambda, VPC, CloudFormation), Docker, GitHub, MySQL</p>
+
+    <p><strong>Role:</strong> Jr. AWS Cloud Engineer</p>
+    <p><strong>Responsibilities:</strong></p>
+    <ul>
+      <li>Designed and deployed AWS infrastructure for high availability and scalability.</li>
+      <li>Monitored system performance via CloudWatch and optimized costs by 15%.</li>
+      <li>Implemented IAM roles and policies for secure cloud resource access.</li>
+      <li>Resolved infrastructure issues and supported automation workflows using CloudFormation templates.</li>
+      <li>Monitored AWS billing and set budget alerts to control costs.</li>
+    </ul>
+
+    <!-- Education Summary -->
+    <div class="section-title">Education Summary</div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Qualification</th>
+          <th>Subject</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bachelor of Computer Science</td>
+          <td>Computer</td>
+          <td>83.44%</td>
+        </tr>
+        <tr>
+          <td>Standard XII / H.S.C.</td>
+          <td>Maths, IT</td>
+          <td>65.67%</td>
+        </tr>
+        <tr>
+          <td>Standard X / S.S.C.</td>
+          <td>General</td>
+          <td>88.00%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Certification & Achievement -->
+    <div class="section-title">Certification & Achievement</div>
+    <ul>
+      <li>Completed academic internship as Jr. AWS Cloud Engineer at One IT Solution Pvt. Ltd.</li>
+    </ul>
+  </div>
+
 </body>
 </html>
